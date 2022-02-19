@@ -1,6 +1,17 @@
 # rewe-api
+- thi sproject is an express.js based api which using official shop.rewe.de api 
+- using puppeteer to acquire product details for products an forwarding them to api
 
-## Endpoints
+## Own endpoints
+- /rewe/api/products?q=<search_string> or <prodcutId>
+    - returns a list of matching products with detialed price
+    - using the /api/suggestions endpoint from rewe
+- /rewe/api/produtDetails?productId=<productId>
+    - using puppeteer to open ProductDetailPage and scrapping productDetials
+    - store productDetails localy to save resources and time
+    - returns json productData 
+
+## Endpoints from shop.rewe.de
 - ```https://shop.rewe.de/api/products```
 - returns
     -  products with less informations
